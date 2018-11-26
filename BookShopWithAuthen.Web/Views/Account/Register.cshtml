@@ -1,0 +1,88 @@
+﻿@model BookShopWithAuthen.Web.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+
+<!-- begin #page-loader -->
+<div id="page-loader" class="fade show"><span class="spinner"></span></div>
+<!-- end #page-loader -->
+<!-- begin #page-container -->
+<div id="page-container" class="fade">
+    <!-- begin register -->
+    <div class="register register-with-news-feed">
+        <!-- begin news-feed -->
+        <div class="news-feed">
+            <div class="news-image" style="background-image: url(../Content/LoginRef/assets/img/login-bg/login-bg-9.jpg)"></div>
+            <div class="news-caption">
+                <h4 class="caption-title"><b>Color</b> Admin App</h4>
+                <p>
+                    As a Color Admin app administrator, you use the Color Admin console to manage your organization’s account, such as add new users, manage security settings, and turn on the services you want your team to access.
+                </p>
+            </div>
+        </div>
+        <!-- end news-feed -->
+        <!-- begin right-content -->
+        <div class="right-content">
+            <!-- begin register-header -->
+            <h1 class="register-header">
+                Sign Up
+                <small>Create your Color Admin Account. It’s free and always will be.</small>
+            </h1>
+            <!-- end register-header -->
+            <!-- begin register-content -->
+            <div class="register-content">
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "margin-bottom-0", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                    <label class="control-label">
+                        Name <span class="text-danger">*</span>
+                    </label>
+                    <div class="row m-b-15">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name", required = "required" })
+                        </div>
+                    </div>
+                    <label class="control-label">Email <span class="text-danger">*</span></label>
+                    <div class="row m-b-15">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email", required = "required" })
+                        </div>
+                    </div>
+                    <label class="control-label">Password <span class="text-danger">*</span></label>
+                    <div class="row m-b-15">
+                        <div class="col-md-12">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+                        </div>
+                    </div>
+                    <label class="control-label">Confirm password<span class="text-danger">*</span></label>
+                    <div class="row m-b-15">
+                        <div class="col-md-12">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Re-password", required = "required" })
+                        </div>
+                    </div>
+
+                    <div class="register-buttons">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                    </div>
+                    <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+                        Already a member? Click <a href="@Url.Action("Login","Account")">here</a> to login.
+                    </div>
+                    <hr />
+                    <p class="text-center">
+                        &copy; Color Admin All Right Reserved 2018
+                    </p>
+                }
+
+            </div>
+            <!-- end register-content -->
+        </div>
+        <!-- end right-content -->
+    </div>
+    <!-- end register -->
+
+</div>
+<!-- end page container -->

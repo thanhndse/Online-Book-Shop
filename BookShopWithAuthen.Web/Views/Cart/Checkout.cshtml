@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+}
+@section css{
+    <style>
+        p{
+            color: forestgreen;
+        }
+    </style>
+    }
+
+<div class="container py-3" >
+    <p>Bạn đã đặt hàng thành công, chi tiết đơn hàng của bạn đã được gửi đến email </p>
+    <p>Để xem toàn bộ đơn hàng đã đặt, bấm vào @Html.ActionLink("Đây", "Index", "Orders")</p>
+    <p>Để tiếp tục mua hàng, bấm vào đây @Html.ActionLink("Đây","Index","Categories") </p>
+</div>
+

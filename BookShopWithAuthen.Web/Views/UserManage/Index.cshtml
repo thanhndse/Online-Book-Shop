@@ -1,0 +1,47 @@
+﻿@model BookShopWithAuthen.Web.ViewModel.UserViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<section class="my-5" style="margin-top: 50px">
+    <div class="container">
+        @if (ViewBag.Message != null)
+        {
+        <h3 style="color: #4caf50">
+            @ViewBag.Message
+        </h3>
+        }
+        <h4 style="color: blueviolet">#Thông tin khách hàng</h4>
+        <form action="@Url.Action("Edit")" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Email</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", disabled = "disabled" })
+                    @Html.HiddenFor(m => m.Email, new { value = Model.Email })
+
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Tên</label>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name,null, new {@class = "text-danger" })
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Số điện thoại</label>
+                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Địa chỉ</label>
+                @Html.TextAreaFor(m => m.Address, new { @class = "form-control", rows = "3" })
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+        <h5 class="my-5"><a href="@Url.Action("ChangePassword")" style="color:brown">Đổi mật khẩu</a></h5>
+
+
+    </div>
+    <div class="clearfix"></div>
+</section>
+

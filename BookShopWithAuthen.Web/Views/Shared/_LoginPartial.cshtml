@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    <li class="menu-has-children">
+        @Html.ActionLink(User.Identity.GetUserName() + "!", "Index", "UserManage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        <ul>
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+            {
+                @Html.AntiForgeryToken()
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
+            }
+            <li>@Html.ActionLink("Quản lý đơn hàng ", "Index", "Orders")</li>
+            <li>@Html.ActionLink("Quản lý tài khoản ", "Index", "UserManage")</li>
+        </ul>
+    </li>
+}
+
+else
+{
+        <li><a href="@Url.Action("Login","Account")">Login</a></li>
+        <li><a href="@Url.Action("Register","Account")">Register</a></li>
+}

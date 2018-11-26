@@ -1,0 +1,260 @@
+﻿@using BookShopWithAuthen.Model.Models
+@model BookShopWithAuthen.Model.Models.Book
+
+@{
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@*Hình và mua hàng*@
+<section class="my-3 py-3" style="margin-top: 50px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <img src="../Image/@Model.Image" alt="" class="img-fluid">
+                            </li>
+                            <li class="list-group-item">
+                                <img src="../Image/@Model.Image" alt="" class="img-fluid">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="../Image/@Model.Image" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 right-content">
+                <h4>@Model.Name</h4>
+                <div class="author-info">
+                    Tác giả:
+                    @foreach (Author author in Model.Authors)
+                    {
+                        <a href="">@author.Name</a>
+                    }
+
+                </div>
+                <div class="price">@Model.Price.000 <sup>đ</sup></div>
+                @if (Model.Quantity != 0)
+                {
+                    <button class="btn bg-main-color btn-shopping-cart btn-success" onclick="addItemToCart(@Model.ID)">
+                        <i class="fa fa-shopping-cart"></i>
+                        Thêm vào giỏ hàng
+                    </button>
+                }
+                else
+                {
+                    <p style="color:red">Sản phẩm đã hết hàng</p>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@*Thông tin chi tiết sản phẩm*@
+<section class="my-3 py-3">
+    <div class="container">
+        <h4>THÔNG TIN CHI TIẾT</h4>
+        <div class="row">
+            <div class="col-sm-8">
+                <table class="table tbl-thong-tin-chi-tiet border">
+                    <tr>
+                        <td>Công ty phát hành	</td>
+                        <td>
+                            <a href="">DTBooks</a>
+                        </td>
+                    </tr>
+                    @*Chua lam*@
+                    <tr>
+                        <td>Ngày xuất bản</td>
+                        <td>@Model.publishDate.Month - @Model.publishDate.Year</td>
+                    </tr>
+                    <tr>
+                        <td>Nhà xuất bản</td>
+                        <td>@Model.Publisher.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Loại bìa</td>
+                        <td>Bìa mềm</td>
+                    </tr>
+                    @if (Model.NumOfPages != null)
+                    {
+                        <tr>
+                            <td>Số trang</td>
+                            <td>@Model.NumOfPages</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*Giới thiệu sản phâm*@
+<section class="my-3 py-3">
+    <div class="container">
+        <h4>GIỚI THIỆU SÁCH</h4>
+        <div class="row">
+            <div class="col-sm-8">
+                <strong>@Model.Name</strong>
+                <p>@Model.Description</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*Sách cùng thể loại*@
+<section class="my-3 py-3">
+    <div class="container">
+        <h4>SÁCH CÙNG THỂ LOẠI</h4>
+        <div class="row">
+            <div class="carousel-book-categiries owl-carousel owl-theme">
+                @foreach (var item in ViewBag.sameCateBooks)
+                {
+
+                    <div class="card">
+                        <a href="/Books?id=@item.ID">
+                            <img class="card-img-top" src="../Image/@item.Image" alt="Card image cap">
+                        </a>
+                        <div class="card-body card-body-book-category">
+                            <h6 class="book-category text-center">@item.Name</h6>
+                        </div>
+                    </div>
+
+
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+@*Hỏi đáp về sản phẩm*@
+<@*section class="my-3 py-3">
+    <div class="container">
+        <h4>HỎI, ĐÁP VỀ SẢN PHẨM</h4>
+        <div class="row my-3">
+            <div class="col-lg-10 col-md-8 col-sm-6">
+                <input type="text" class="form-control border-radius-custom" placeholder="Hay dat cau cau hoi lien quan den san pham">
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <button class="btn bg-main-color btn-block text-white btn-submit">
+                    <i class="fa fa-paper-plane"></i>
+                    Gui cau hoi
+                </button>
+            </div>
+        </div>
+        <strong>Các câu hỏi thường gặp về sản phẩm:</strong>
+        <ul class="list-group mt-2 list-questions">
+            <li class="list-group-item">Chế độ bảo hành cùng cách thức vận chuyển sản phẩm này thế nào?</li>
+            <li class="list-group-item">Kích thước sản phẩm này ?</li>
+            <li class="list-group-item">Sản phẩm này có dễ dùng không ?</li>
+        </ul>
+    </div>
+</section>*@
+
+@*Nhận xét của khách hàng*@
+@*<section class="my-3 py-3" style="font-size: 0.9em;">
+    <div class="container">
+        <h4>KHÁCH HÀNG NHẬN XÉT</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>1. Đánh giá của bạn về sản phẩm này:</strong>
+                    <span class="star-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </span>
+                    <div class="form-group mt-2">
+                        <label class="font-weight-bold">2. Tiêu đề của nhận xét:</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control border-radius-custom" placeholder="Nhap tieu de nhan xet(khong bat buoc)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">3. Viết nhận xét của bạn vào bên dưới:</label>
+                        <textarea rows="5" class="form-control border-radius-custom" placeholder="Nham xet cua ban ve san pham nay..."></textarea>
+                    </div>
+                    <button class="btn bg-main-color text-white btn-submit">
+                        <i class="fa fa-paper-plane"></i>
+                        Gui nhan xet
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="" style="width: 100%"><img src="../Content/FrontEndRef/../Content/FrontEndRef/imgmua-ngay-sach.jpg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="col-md-8 pt-4">
+                            <h5>Để Học Tốt Tiếng Việt 5 - Tập 1</h5>
+                            <div class="book-author">Tác giả <a href="">Lê Thị Phương</a></div>
+                        </div>
+                    </div>
+                    <p class="mt-3">Quý khách có thắc mắc về sản phẩm hoặc dịch vụ của Tiki? Quý khách đang muốn khiếu nại hay phản hồi về đơn hàng đã mua?</p>
+                    <p>Tham khảo thông tin thêm tại Thông tin hỗ trợ.</p>
+                    <p>Liên hệ hotline <a href="">1900-6035</a> (1,000đ/phút), hoặc gửi thông tin về email <a href="">hotro@tiki.vn</a> để được hỗ trợ ngay.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>*@
+
+@section scripts{
+    <script src="~/Content/FrontEndRef/js/BookIndex.js">
+        
+    </script>
+}
+@section css{
+    <style>
+        .price {
+            color: red;
+            font-size: 2em;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .star-rating i {
+            font-size: 2em;
+        }
+
+        .btn-submit {
+            border-radius: 20px;
+            transition: all 0.3 ease-in-out;
+        }
+
+            .btn-submit:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                color: black;
+            }
+
+        .img-table-of-content {
+            display: block;
+            margin: auto;
+        }
+
+        .btn-shopping-cart {
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        .tbl-thong-tin-chi-tiet tr td:nth-of-type(1) {
+            background-color: rgba(0,0,0,0.1);
+            font-weight: 500;
+        }
+
+        .border-radius-custom {
+            border-radius: 15px;
+        }
+
+        section {
+            background-color: rgba(0,0,0,0.04);
+        }
+    </style>
+}

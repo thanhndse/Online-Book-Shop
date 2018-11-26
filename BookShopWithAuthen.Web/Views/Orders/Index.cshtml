@@ -1,0 +1,114 @@
+﻿@using BookShopWithAuthen.Model.Models
+@model IEnumerable<BookShopWithAuthen.Model.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@section scripts{
+    <script>
+        function checksure(e) {
+            e.preventDefault();
+            swal("Are you sure you want to do this?", {
+                buttons: ["Cancel it", "Keep it"],
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+
+                    } else {
+                        $(this).unbind('click').click();
+
+                    }
+                });
+
+        }
+
+        $(".cancel-order").click(checksure);
+    </script>
+}
+@section css{
+    <style type="text/css">
+        #main-table-order-manager {
+        }
+
+        #header-myorder {
+            margin-top: 30px;
+            color: blueviolet;
+        }
+    </style>
+}
+    <div class="container">
+        @if (Model.Count() != 0)
+        {
+            <h5 id="header-myorder">Đơn hàng của tôi</h5>
+            <table class="table" id="main-table-order-manager">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Mã đơn hàng</th>
+                        <th scope="col">Ngày mua</th>
+                        <th scope="col">Tổng tiền</th>
+                        <th scope="col">Trạng thái đơn hàng</th>
+                        <th scope="col">Cancel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@Html.ActionLink(item.Id.ToString(), "Details", new { id = item.Id })</th>
+                            <td>@item.OrderDate.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Amount.000 đ</td>
+                            <td>
+                                @switch (item.Status)
+                                {
+                                    case (int)StatusOrder.New:
+                                        <text>
+                                            Đơn hàng đang chờ duyệt
+                                        </text>
+                                        break;
+                                    case (int)StatusOrder.Delivering:
+                                        <text>
+                                            Đơn hàng đang được chuyển
+                                        </text>
+                                        break;
+                                    case (int)StatusOrder.Canceled:
+                                        <text>
+                                            Bạn đã hủy đơn hàng
+                                        </text>
+                                        break;
+                                    case (int)StatusOrder.Finished:
+                                        <text>
+                                            Đơn hàng đã giao thành công
+                                        </text>
+                                        break;
+                                    case (int)StatusOrder.SoldOut:
+                                        <text>
+                                            Người quản lý đã hủy đơn hàng
+                                        </text>
+                                        break;
+                                }
+
+
+                            </td>
+                            <td>
+                                @if (item.Status == (int)StatusOrder.New)
+                                {
+                                    using (Html.BeginForm("Cancel", "Orders", FormMethod.Post))
+                                    {
+                                        @Html.Hidden("id", item.Id)
+                                        <input type="submit" class="btn btn-danger cancel-order" value="Cancel" />
+                                    }
+                                }
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        }
+        else
+        {
+            <h3 style="color:forestgreen" class="mx-3 my-3">You don't have any order</h3>
+        }
+    </div>

@@ -1,0 +1,79 @@
+﻿@using BookShopWithAuthen.Web.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<!-- begin #page-loader -->
+<div id="page-loader" class="fade show"><span class="spinner"></span></div>
+<!-- end #page-loader -->
+<!-- begin #page-container -->
+<div id="page-container" class="fade">
+    <!-- begin login -->
+    <div class="login login-with-news-feed">
+        <!-- begin news-feed -->
+        <div class="news-feed">
+            <div class="news-image" style="background-image: url(../Content/LoginRef/assets/img/login-bg/login-bg-11.jpg)"></div>
+            <div class="news-caption">
+                <h4 class="caption-title"><b>Color</b> Admin App</h4>
+                <p>
+                    Download the Color Admin app for iPhone®, iPad®, and Android™. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <!-- end news-feed -->
+        <!-- begin right-content -->
+        <div class="right-content">
+            <!-- begin login-header -->
+            <div class="login-header">
+                <div class="brand">
+                    <span class="logo"></span> <b>Color</b> Admin
+                    <small>responsive bootstrap 3 admin template</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sign-in"></i>
+                </div>
+            </div>
+            <!-- end login-header -->
+            <!-- begin login-content -->
+            <div class="login-content">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "margin-bottom-0", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+                    <div class="form-group m-b-15">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-lg", required = "required", placeholder = "Email Address" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group m-b-15">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-lg", required = "required", placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="checkbox checkbox-css m-b-30">
+
+                        <input type="checkbox" id="remember_me_checkbox" name="RememberMe" value="true" />
+                        <label for="remember_me_checkbox">
+                            Remember Me
+                        </label>
+                    </div>
+                    <div class="login-buttons">
+                        <button type="submit" class="btn btn-success btn-block btn-lg">Sign me in</button>
+                    </div>
+                    <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+                        Not a member yet? Click <a href="@Url.Action("Register","Account")" class="text-success">here</a> to register. <br />
+                        <a href="@Url.Action("ForgotPassword","Account")" class="text-success">Forgot password ?</a>
+                    </div>
+                    <hr />
+                    <p class="text-center text-grey-darker">
+                        &copy; Color Admin All Right Reserved 2018
+                    </p>
+                }
+
+            </div>
+            <!-- end login-content -->
+        </div>
+        <!-- end right-container -->
+    </div>
+    <!-- end login -->
+</div>

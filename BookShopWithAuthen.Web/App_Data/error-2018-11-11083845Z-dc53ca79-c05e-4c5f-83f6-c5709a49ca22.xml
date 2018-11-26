@@ -1,0 +1,191 @@
+﻿<error errorId="dc53ca79-c05e-4c5f-83f6-c5709a49ca22" application="/LM/W3SVC/3/ROOT" host="DESKTOP-TLL3G7H" type="System.NullReferenceException" message="Object reference not set to an instance of an object." source="BookShopWithAuthen.Service" detail="System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at BookShopWithAuthen.Service.Services.CartService.GetQuanity(String userID, Int32 bookID) in D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Service\Services\CartService.cs:line 87&#xD;&#xA;   at BookShopWithAuthen.Web.Controllers.CartController.AddToCart(Int32 bookID) in D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Web\Controllers\CartController.cs:line 170&#xD;&#xA;   at lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c.&lt;BeginInvokeSynchronousActionMethod&gt;b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__11_0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_1.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__3()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__5(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="thanhndse63559@fpt.edu.vn" time="2018-11-11T08:38:45.7297698Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:9&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.9,vi;q=0.8,en-GB;q=0.7,la;q=0.6&#xD;&#xA;HTTP_COOKIE:_ga=GA1.1.699527049.1539353018; __RequestVerificationToken=Sl5K5ycYc-SdqEhRATzWKmOMLyHp8NCKMi1-qC4tKJxGOBUIlk23Y-B0mEsnq8hvjpBrez5lCYMO7Wb2tixnm-BxzvfgH1nYDxuxixU2WNI1; ASP.NET_SessionId=2yizbltv5w2owfvuv4ebesk2; .AspNet.ApplicationCookie=3WYa1lSrPBZlp2X-5Uwvfgn_v_2KYbssD79Fee442_ZnFtghf3MPlPIQth-7icgdBtR6gKl9k96923Ey7UVEoG5XRPAx0QF9pwW41sgyb3oI8hJKwEgLFrddxCIdMiRtHtqTP5KH7JO4acmfXbu-zPVgBJ5uHDE49WsSk9b4IwEULqdOjJxj8OzwKxW0droYcOLvwCQaRUrVSlsczLXq9kGeUUT1J23awUXdT0nKnh7s2q9iDPCitELlmJoUwbheDwz3fS7nqk3D1lpnq-UMfcsz2pDYnqhgZZXI_W4wN2vmosa1AHAEOLTlXCasx38iBJnEiAwB256QWZBZdOGSGDwOVXAh6J7xeQ9M8AO40wxRI4tymMTQKt7WZlCaaeloqenzn6M4DBC8cNipc9KIeFkLOG4N4VKJGpr3j-bB9eFlaeXZxtPxfK74o5RqG6fB5TXbGj6UtKM8cPk5y6_x1mgr1kkMxuEFT0PYe8ZgsKuwZqc-pFeIeab6cr36-TVOZnbI3EyKwv5w3jcPRKfbFWjn8TYpGtOjMuzmXoz2p2A&#xD;&#xA;HTTP_HOST:localhost:50364&#xD;&#xA;HTTP_REFERER:http://localhost:50364/Books?id=15&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:50364&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 9&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: en-US,en;q=0.9,vi;q=0.8,en-GB;q=0.7,la;q=0.6&#xD;&#xA;Cookie: _ga=GA1.1.699527049.1539353018; __RequestVerificationToken=Sl5K5ycYc-SdqEhRATzWKmOMLyHp8NCKMi1-qC4tKJxGOBUIlk23Y-B0mEsnq8hvjpBrez5lCYMO7Wb2tixnm-BxzvfgH1nYDxuxixU2WNI1; ASP.NET_SessionId=2yizbltv5w2owfvuv4ebesk2; .AspNet.ApplicationCookie=3WYa1lSrPBZlp2X-5Uwvfgn_v_2KYbssD79Fee442_ZnFtghf3MPlPIQth-7icgdBtR6gKl9k96923Ey7UVEoG5XRPAx0QF9pwW41sgyb3oI8hJKwEgLFrddxCIdMiRtHtqTP5KH7JO4acmfXbu-zPVgBJ5uHDE49WsSk9b4IwEULqdOjJxj8OzwKxW0droYcOLvwCQaRUrVSlsczLXq9kGeUUT1J23awUXdT0nKnh7s2q9iDPCitELlmJoUwbheDwz3fS7nqk3D1lpnq-UMfcsz2pDYnqhgZZXI_W4wN2vmosa1AHAEOLTlXCasx38iBJnEiAwB256QWZBZdOGSGDwOVXAh6J7xeQ9M8AO40wxRI4tymMTQKt7WZlCaaeloqenzn6M4DBC8cNipc9KIeFkLOG4N4VKJGpr3j-bB9eFlaeXZxtPxfK74o5RqG6fB5TXbGj6UtKM8cPk5y6_x1mgr1kkMxuEFT0PYe8ZgsKuwZqc-pFeIeab6cr36-TVOZnbI3EyKwv5w3jcPRKfbFWjn8TYpGtOjMuzmXoz2p2A&#xD;&#xA;Host: localhost:50364&#xD;&#xA;Referer: http://localhost:50364/Books?id=15&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&#xD;&#xA;Origin: http://localhost:50364&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/3/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="thanhndse63559@fpt.edu.vn" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="thanhndse63559@fpt.edu.vn" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="thanhndse63559@fpt.edu.vn" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="9" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="3" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/3" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Cart/AddToCart" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Web\Cart\AddToCart" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="57768" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Cart/AddToCart" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="50364" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Cart/AddToCart" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="9" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.9,vi;q=0.8,en-GB;q=0.7,la;q=0.6" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="_ga=GA1.1.699527049.1539353018; __RequestVerificationToken=Sl5K5ycYc-SdqEhRATzWKmOMLyHp8NCKMi1-qC4tKJxGOBUIlk23Y-B0mEsnq8hvjpBrez5lCYMO7Wb2tixnm-BxzvfgH1nYDxuxixU2WNI1; ASP.NET_SessionId=2yizbltv5w2owfvuv4ebesk2; .AspNet.ApplicationCookie=3WYa1lSrPBZlp2X-5Uwvfgn_v_2KYbssD79Fee442_ZnFtghf3MPlPIQth-7icgdBtR6gKl9k96923Ey7UVEoG5XRPAx0QF9pwW41sgyb3oI8hJKwEgLFrddxCIdMiRtHtqTP5KH7JO4acmfXbu-zPVgBJ5uHDE49WsSk9b4IwEULqdOjJxj8OzwKxW0droYcOLvwCQaRUrVSlsczLXq9kGeUUT1J23awUXdT0nKnh7s2q9iDPCitELlmJoUwbheDwz3fS7nqk3D1lpnq-UMfcsz2pDYnqhgZZXI_W4wN2vmosa1AHAEOLTlXCasx38iBJnEiAwB256QWZBZdOGSGDwOVXAh6J7xeQ9M8AO40wxRI4tymMTQKt7WZlCaaeloqenzn6M4DBC8cNipc9KIeFkLOG4N4VKJGpr3j-bB9eFlaeXZxtPxfK74o5RqG6fB5TXbGj6UtKM8cPk5y6_x1mgr1kkMxuEFT0PYe8ZgsKuwZqc-pFeIeab6cr36-TVOZnbI3EyKwv5w3jcPRKfbFWjn8TYpGtOjMuzmXoz2p2A" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:50364" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:50364/Books?id=15" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:50364" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+    <item name="HTTP_APPLICATIONINSIGHTS_REQUESTTRACKINGTELEMETRYMODULE_ROOTREQUEST_ID">
+      <value string="e5cfe2dc-3e5f-4f86-8ff7-9f75e965d597" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="bookID">
+      <value string="15" />
+    </item>
+  </form>
+  <cookies>
+    <item name="_ga">
+      <value string="GA1.1.699527049.1539353018" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="Sl5K5ycYc-SdqEhRATzWKmOMLyHp8NCKMi1-qC4tKJxGOBUIlk23Y-B0mEsnq8hvjpBrez5lCYMO7Wb2tixnm-BxzvfgH1nYDxuxixU2WNI1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="2yizbltv5w2owfvuv4ebesk2" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="3WYa1lSrPBZlp2X-5Uwvfgn_v_2KYbssD79Fee442_ZnFtghf3MPlPIQth-7icgdBtR6gKl9k96923Ey7UVEoG5XRPAx0QF9pwW41sgyb3oI8hJKwEgLFrddxCIdMiRtHtqTP5KH7JO4acmfXbu-zPVgBJ5uHDE49WsSk9b4IwEULqdOjJxj8OzwKxW0droYcOLvwCQaRUrVSlsczLXq9kGeUUT1J23awUXdT0nKnh7s2q9iDPCitELlmJoUwbheDwz3fS7nqk3D1lpnq-UMfcsz2pDYnqhgZZXI_W4wN2vmosa1AHAEOLTlXCasx38iBJnEiAwB256QWZBZdOGSGDwOVXAh6J7xeQ9M8AO40wxRI4tymMTQKt7WZlCaaeloqenzn6M4DBC8cNipc9KIeFkLOG4N4VKJGpr3j-bB9eFlaeXZxtPxfK74o5RqG6fB5TXbGj6UtKM8cPk5y6_x1mgr1kkMxuEFT0PYe8ZgsKuwZqc-pFeIeab6cr36-TVOZnbI3EyKwv5w3jcPRKfbFWjn8TYpGtOjMuzmXoz2p2A" />
+    </item>
+  </cookies>
+</error>

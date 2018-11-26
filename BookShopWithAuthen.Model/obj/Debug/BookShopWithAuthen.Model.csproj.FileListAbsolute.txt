@@ -1,0 +1,16 @@
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\BookShopWithAuthen.Model.dll.config
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\BookShopWithAuthen.Model.dll
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\BookShopWithAuthen.Model.pdb
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\EntityFramework.dll
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\EntityFramework.xml
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\obj\Debug\BookShopWithAuthen.Model.csprojAssemblyReference.cache
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\obj\Debug\BookShopWithAuthen.Model.csproj.CoreCompileInputs.cache
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\obj\Debug\BookShopWithAuthen.Model.csproj.CopyComplete
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\obj\Debug\BookShopWithAuthen.Model.dll
+D:\fptTerm\term5\Csharp_dotnet\FinalProject\BackEnd\BookShopWithAuthen.Model\obj\Debug\BookShopWithAuthen.Model.pdb

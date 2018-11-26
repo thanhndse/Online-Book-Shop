@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Book shop online</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="/Content/FrontEndRef/../Content/FrontEndRef/imgfavicon.png" rel="icon">
+    <link href="/Content/FrontEndRef/../Content/FrontEndRef/imgapple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!--SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Bootstrap-->
+    @Styles.Render("~/Content/FrontEndRef/css")
+    @RenderSection("css", required: false)
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+        <div class="container-fluid">
+
+            <div id="logo" class="pull-left">
+                <h3><a href="#intro" class="scrollto">DTBOOKS</a></h3>
+            </div>
+
+            <nav id="nav-menu-container">
+
+
+                <ul class="nav-menu">
+                  
+                    <a href="@Url.Action("Index","Cart")"><i class="fas fa-shopping-cart " style="color: aliceblue; font-size: 2em"></i></a>
+                    <li>@Html.ActionLink("Trang chủ", "Index", "HomePage")</li>
+                    <li>@Html.ActionLink("Danh mục", "Index", "Categories")</li>
+                    @Html.Partial("_LoginPartial")
+                </ul>
+
+
+            </nav>
+        </div>
+    </header>
+    <!--End header-->
+    <section id="intro" style="height: 80px"></section>
+    @RenderBody()
+    <hr />
+    <!--Footer-->
+    <footer class="text-white py-3" style="background-color:forestgreen">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    Copyright &copy; 2018 By DT Book
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End footer-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Content/FrontEndRef/script")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
